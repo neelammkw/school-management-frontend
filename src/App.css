@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  padding: 20px;
 }
 
 .App-header {
@@ -7,9 +12,12 @@
   padding: 20px;
   color: white;
   margin-bottom: 30px;
+  text-align: center;
+  width: 100%;
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -18,12 +26,13 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 0 0 calc(50% - 20px);
+  max-width: calc(50% - 20px);
   padding: 0 15px;
 }
 
@@ -45,7 +54,8 @@
 }
 
 .btn {
-  display: inline-block;
+  display: block;
+  margin: 10px auto;
   font-weight: 400;
   text-align: center;
   white-space: nowrap;
@@ -63,6 +73,12 @@
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
 }
 
 .table {
@@ -87,6 +103,7 @@
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05);
 }
+
 .alert {
   padding: 10px 15px;
   margin: 10px 0;
